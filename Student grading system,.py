@@ -11,7 +11,7 @@ def add_student(stu_id):
                             'Course': set(course),
                             'marks': {} })
         print("Student ", stu_name, " added successfully")
-    elif stu_id in student:
+    else:
         print("Student already exists")
 
 #function to assign grade
@@ -89,9 +89,9 @@ def get_valid_student_id():
         try:
             stu_id = int(input("Enter student id: "))
             if stu_id < 0:
-                print("Error: Student ID should be a positive number.")
+               print("Error: Student ID should be a positive number.")
             else:
-                return stu_id
+               return stu_id
         except ValueError: 
             print("Error: Student ID should be a valid number.")
 
